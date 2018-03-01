@@ -8,6 +8,8 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesService } from './course/courses.service';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { TitlePipe } from './title.pipe';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -17,7 +19,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   declarations: [
     AppComponent,
     CoursesComponent,
-    CourseComponent
+    CourseComponent,
+    FavoriteComponent,
+    TitlePipe
   ],
   imports: [
     BrowserModule,
