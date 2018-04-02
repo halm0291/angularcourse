@@ -1,0 +1,10 @@
+<div class="zippy panel panel-default">
+  <div (click)="toggle()" class="zippy-title panel-heading">
+     {{title}}
+     <i class="material-icons">{{ visible ? 'keyboard_arrow_down' : 'keyboard_arrow_right' }}</i>
+  </div>
+  <div [hidden]="!visible" class="zippy-content panel-body">
+    <ng-content ></ng-content>
+  </div>
+ 
+</div>
