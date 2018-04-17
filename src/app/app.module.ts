@@ -9,22 +9,26 @@ import { TitlePipe } from './title.pipe';
 import { ZippyComponent } from './zippy/zippy.component';
 // import { StarComponent } from './star/star.component';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { CourseFormComponent } from './course-form/course-form.component';
+import {SignupFormComponent} from "./signup-form/signup-form.component";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseComponent,
-    ZippyComponent
-    // StarComponent
-    CoursesComponent,
+    ZippyComponent,
     FavoriteComponent,
-    TitlePipe
+    TitlePipe,
+    CourseFormComponent,
+    SignupFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

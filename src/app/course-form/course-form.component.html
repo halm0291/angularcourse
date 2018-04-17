@@ -1,0 +1,21 @@
+<form>
+  <div class="form-group">
+    <label for="courseName">Course Name</label>
+    <input minlength="5" maxlength="10" #courseName="ngModel" (change)="log(courseName)" required  ngModel name="courseName" type="text" id="courseName" class="form-control">
+    <div *ngIf="courseName.touched && !courseName.valid">
+      <div *ngIf="courseName.errors.required">Course name is mandatory</div>
+      <div *ngIf="courseName.errors.minlength">Course name has a minimun length</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="courseCategory">Category</label>
+    <select ngModel name="courseCategory" id="courseCategory" class="form-control">
+      <option *ngFor="let category of categories" [value]='category.id'>{{category.id}}</option>
+    </select>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" ngModel name="hasGuarantee">
+    </label>
+  </div>
+</form>
